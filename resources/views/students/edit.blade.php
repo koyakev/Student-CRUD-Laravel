@@ -13,6 +13,7 @@
                     <div class="col-auto">
                         <form method="POST" action="{{ route('update', $student->id) }}">
                         @csrf
+                        @METHOD("PUT")
                             <div class="mb-3 row">
                                 <label for="name" class="col-sm-4 col-form-label">Enter Name: </label>
                                 <div class="col-sm-8">

@@ -20,10 +20,10 @@ Route::get('/create', [StudentController::class, 'create'])->name('createStudent
 
 Route::post('/createStudent', [StudentController::class, 'store'])->name('store');
 
-Route::post('/delete/{student}', [StudentController::class, 'destroy'])->name('delete');
+Route::delete('/delete/{student}', [StudentController::class, 'destroy'])->name('delete');
 
 Route::get('/edit/{student}', [StudentController::class, 'edit'])->name('edit');
 
-Route::post('/update/{student}', [StudentController::class, 'update'])->name('update');
+Route::put('/update/{student}', [StudentController::class, 'update'])->name('update');
 
 Route::get('/display/{student}', [StudentController::class, 'display'])->name('display');

@@ -20,7 +20,7 @@ View
                     <p>Name: {{ $student->name }}</p>
                     <p>Address: {{ $student->address }}</p>
                     <p>Mobile: {{ $student->mobile }}</p>
-                    {!! QrCode::size(100)->generate($student) !!}
+                    {!! QrCode::size(100)->generate(strval("ID: " . $student->id) . "\nName: " . $student->name) !!}
                     <div>
                         <a href="{{ route('index') }}">Back</a>
                     </div>

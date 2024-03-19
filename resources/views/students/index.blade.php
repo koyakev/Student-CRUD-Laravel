@@ -30,10 +30,11 @@
                                 <td>{{ $student->address }}</td>
                                 <td>{{ $student->mobile }}</td>
                                 <td>
+                                    <a href="{{ route('display', $student->id) }}" class="btn btn-secondary">View</a>
+                                    <a href="{{ route('edit', $student->id) }}" class="btn btn-primary">Edit</a>
                                     <form method="POST" action="{{ route('delete', $student->id )}}">
                                         @csrf
-                                        <a href="{{ route('display', $student->id) }}" class="btn btn-secondary">View</a>
-                                        <a href="{{ route('edit', $student->id) }}" class="btn btn-primary">Edit</a>
+                                        @METHOD("DELETE")
                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Confirm Delete?')">Delete</button>
                                     </form>
                                 </td>
